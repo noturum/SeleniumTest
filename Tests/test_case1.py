@@ -15,9 +15,9 @@ def test_case1(webdriver):
 def test_case2(webdriver):
     sbis = SbisPage(webdriver)
     sbis.goto_contact()
-    sbis.check_region_and_partners()
+    assert sbis.check_region_and_partners()
     sbis.select_region(TestData.TEST_REGION_TITLE)
-    sbis.check_region_and_partners()
+    assert sbis.check_region_and_partners()
 def test_case3(webdriver):
     sbis = SbisPage(webdriver)
     sbis.get(sbis.url)
